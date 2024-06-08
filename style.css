@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+.ludo-container {
+    margin: 20px auto;
+    width: 450px;
+}
+
+.ludo-container .ludo {
+    height:450px ;
+    width: 100%;
+    border: 1px solid red;
+    background: url(ld.png);
+    background-size: contain;
+    position: absolute;
+}
+
+.player-pieces {
+    height: 100%;
+    width: 100%;
+}
+
+.player-piece{
+    width: 3%;
+    height: 3%;
+    border: 2px solid;
+    border-radius: 50%;
+    position: relative;
+
+    /* top: 15%;
+    left: 50%; */
+}
+
+.player-piece.highlight {
+    cursor: pointer;
+    border: 2px dashed;
+    animation: spin is infinite linear;
+}
+@keyframes span {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+[player-id=p1].player-piece {
+background-color: red;
+}
+
+[player-id=p2].player-piece {
+    background-color: yellow;
+    }
+
+    .player-base {
+        width: 40%;
+        height: 40%;
+        border: 30px solid;
+        position: absolute;
+    }
+
+ .player-bases [player-id="p1"].player-base {
+    bottom: 0;
+    left: 0;
+
+ }   
+ .player-bases [player-id="p2"].player-base {
+    top: 0;
+    right: 0;
+
+ } 
+    
+.btn{
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-dice {
+    background-color: green;
+    color : #fff;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
